@@ -15,6 +15,6 @@
 <div class="jumbotron">
   <h1>Spring GoodReads</h1>
   <p>A spring based application to demonstrate the basics of <a href="#">Spring-MVC</a>, 
-  		<a href="#">JPA</a>, <a href="#">HyperSQLDB</a>,<br /><a href="#">Bootstrap</a> and <a href="#">Maven (M2E)</a>.</p>
+  		<a href="#">JPA</a>, <a href="#">HyperSQLDB</a>, and <a href="#">Bootstrap 3</a>.</p>
 </div>
 
