@@ -49,7 +49,7 @@
                     <h3>
                         Java Framework</h3>
                     <p>
-                        A spring based application to demonstrate the power of Spring Core, Data-JPA, and MVC</p>
+                        A spring based application to demonstrate the basics of Spring-MVC, JPA, HyperSQLDB, Bootstrap 3 and m2e</p>
                 </div>
             </div>
             <!-- End Item -->
