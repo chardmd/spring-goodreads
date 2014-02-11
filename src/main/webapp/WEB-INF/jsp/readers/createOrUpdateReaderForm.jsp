@@ -42,8 +42,7 @@
 				    <div class="form-group">
 		             <form:label path="address" class="col-lg-1 control-label">Address</form:label>
 		             <div class="col-lg-3">
-		               <form:textarea class="form-control" rows="3" path="address" id="address"></form:textarea>
-		               <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+		               <form:textarea class="form-control" rows="3" path="address" id="address" placeholder="Complete Address"></form:textarea>
 		            </div>
 		            <form:errors path="address" cssclass="error"  element="label" class="error"/>
 		           </div>
@@ -66,7 +65,6 @@
 		           
 		           <div class="form-group">
 		             <div class="col-lg-3 col-lg-offset-1">
-		               <button class="btn btn-default">Cancel</button> 
 		               <button type="submit" class="btn btn-primary">Submit</button> 
 		             </div>
 		           </div>
