@@ -2,6 +2,8 @@ package com.springdemo.goodreads.web;
 
 import java.util.Map;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -38,7 +40,7 @@ public class ReaderController {
     }
 
     @RequestMapping(value = "/readers/new", method = RequestMethod.POST)
-    public String processCreationForm(Reader reader, BindingResult result, SessionStatus status) {
+    public String processCreationForm(@Valid Reader reader, BindingResult result, SessionStatus status) {
         if (result.hasErrors()) {
             return "readers/createOrUpdateReaderForm";
         } else {

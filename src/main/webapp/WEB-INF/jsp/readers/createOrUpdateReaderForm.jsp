@@ -15,16 +15,11 @@
 
 	<div class="container">
 	
-	<c:choose>
-        <c:when test="${owner['new']}"><c:set var="method" value="post"/></c:when>
-        <c:otherwise><c:set var="method" value="put"/></c:otherwise>
-    </c:choose>
-	
 	  <jsp:include page="../fragments/bodyHeader.jsp"/>
 	
 			<div class="row">
 		     <div class="well">
-		       <form:form modelAttribute="reader" method="${method}" class="form-horizontal" id="add-owner-form">
+		       <form:form modelAttribute="reader" method="post" class="form-horizontal" id="add-owner-form">
 		         <fieldset>
 		           <legend>Add Reader</legend>
 		           

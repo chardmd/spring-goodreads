@@ -44,7 +44,8 @@ public class GoodReadImpl implements GoodReadService {
 		return readerRepository.findById(id);
 	}
 
-	@Override
+    @Override
+    @Transactional
 	public void saveReader(Reader reader) throws DataAccessException {
 		readerRepository.save(reader);
 	}
