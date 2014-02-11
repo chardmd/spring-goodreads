@@ -28,6 +28,7 @@
 		             <div class="col-lg-3">
 		               <form:input type="text" class="form-control" id="firstName" path="firstName" placeholder="First Name" />
 		             </div>
+		             <form:errors path="firstName" cssclass="error" element="label" class="error" />
 		           </div>
 		           
 		           <div class="form-group">
@@ -35,6 +36,7 @@
 		             <div class="col-lg-3">
 		               <form:input type="text" class="form-control" id="lastName" path="lastName" placeholder="Last Name" />
 		             </div>
+		             <form:errors path="lastName" cssclass="error" element="label" class="error" />
 		           </div>
 		           
 				    <div class="form-group">
@@ -42,7 +44,8 @@
 		             <div class="col-lg-3">
 		               <form:textarea class="form-control" rows="3" path="address" id="address"></form:textarea>
 		               <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
-		             </div>
+		            </div>
+		            <form:errors path="address" cssclass="error"  element="label" class="error"/>
 		           </div>
 		           
 		           <div class="form-group">
@@ -50,6 +53,7 @@
 		             <div class="col-lg-3">
 		               <form:input type="text" class="form-control" path="city" id="city" placeholder="City" />
 		             </div>
+		             <form:errors path="city" cssclass="error"  element="label" class="error"/>
 		           </div>
 		           
 		           <div class="form-group">
@@ -57,6 +61,7 @@
 		             <div class="col-lg-3">
 		               <form:input type="text" class="form-control" path="telephone" id="telephone" placeholder="Phone" />
 		             </div>
+		             <form:errors path="telephone" cssclass="error" element="label" class="error"/>
 		           </div>
 		           
 		           <div class="form-group">
