@@ -63,9 +63,9 @@
 		             <form:errors path="telephone" cssclass="error" element="label" class="error"/>
 		           </div>
 		           
-		           <div class="form-group">
-		             <div class="col-lg-3 col-lg-offset-1">
-		               <button type="submit" class="btn btn-primary">Submit</button> 
+		           <div>
+		             <div class="col-lg-offset-1">
+		               <button type="submit" class="btn btn-primary btn-sm">Submit</button> 
 		             </div>
 		           </div>
 		           

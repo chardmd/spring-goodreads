@@ -33,6 +33,14 @@
             <th>Telephone</th>
             <td><c:out value="${reader.telephone}"/></td>
         </tr>
+        <tr>
+            <td colspan="2"> 
+            	<spring:url value="{readerId}/edit.html" var="editUrl">
+                    <spring:param name="readerId" value="${reader.id}"/>
+                </spring:url>
+                <a href="${fn:escapeXml(editUrl)}" class="btn btn-primary btn-sm">Edit Reader</a>
+           </td> 
+        </tr>
     </table>
 
     <jsp:include page="../fragments/footer.jsp"/>

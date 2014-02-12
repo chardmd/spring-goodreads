@@ -6,6 +6,7 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
@@ -65,12 +66,24 @@ public class ReaderController {
         return "readers/findReaders";
     }
     
-    /**
-     * Custom handler for displaying a reader.
-     *
-     * @param readerId the ID of the reader to display
-     * @return a ModelMap with the model attributes for the view
-     */
+    @RequestMapping(value = "/readers/{readerId}/edit", method = RequestMethod.GET)
+    public String initUpdateOwnerForm(@PathVariable("readerId") int readerId, Model model) {
+        Reader reader = this.goodReadService.findReaderById(readerId);
+        model.addAttribute(reader);
+        return "readers/createOrUpdateReaderForm";
+    }
+    
+    @RequestMapping(value = "/readers/{readerId}/edit", method = RequestMethod.POST)
+    public String processUpdateOwnerForm(@Valid Reader reader, BindingResult result, SessionStatus status) {
+        if (result.hasErrors()) {
+            return "owners/createOrUpdateOwnerForm";
+        } else {
+            this.goodReadService.saveReader(reader);
+            status.setComplete();
+            return "redirect:/readers/{readerId}";
+        }
+    }
+    
     @RequestMapping("/readers/{readerId}")
     public ModelAndView showOwner(@PathVariable("readerId") int readerId) {
         ModelAndView mav = new ModelAndView("readers/readerDetails");
