@@ -1,5 +1,6 @@
 package com.springdemo.goodreads.web;
 
+import java.util.Collection;
 import java.util.Map;
 
 import javax.validation.Valid;
@@ -89,6 +90,31 @@ public class ReaderController {
         ModelAndView mav = new ModelAndView("readers/readerDetails");
         mav.addObject(this.goodReadService.findReaderById(readerId));
         return mav;
+    }
+    
+    @RequestMapping(value = "/readers", method = RequestMethod.GET)
+    public String processFindForm(Reader reader, BindingResult result, Map<String, Object> model) {
+
+        if (reader.getLastName() == null) {
+            reader.setLastName("");
+        }
+
+        // find owners by last name
+        Collection<Reader> results = this.goodReadService.findReaderByLastName(reader.getLastName());
+        if (results.size() < 1) {
+            // no owners found
+            result.rejectValue("lastName", "notFound", "not found");
+            return "readers/findReaders";
+        }
+        if (results.size() > 1) {
+            // multiple owners found
+            model.put("selections", results);
+            return "readers/readersList";
+        } else {
+            // 1 owner found
+            reader = results.iterator().next();
+            return "redirect:/readers/" + reader.getId();
+        }
     }
 
 }

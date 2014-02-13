@@ -49,6 +49,12 @@ public class GoodReadImpl implements GoodReadService {
 	public void saveReader(Reader reader) throws DataAccessException {
 		readerRepository.save(reader);
 	}
+    
+    @Override
+    @Transactional(readOnly = true)
+    public Collection<Reader> findReaderByLastName(String lastName) throws DataAccessException {
+        return readerRepository.findByLastName(lastName);
+    }
 
 
 }

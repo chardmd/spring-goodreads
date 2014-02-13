@@ -3,6 +3,7 @@ package com.springdemo.goodreads.service;
 import java.util.Collection;
 
 import org.springframework.dao.DataAccessException;
+
 import com.springdemo.goodreads.model.Book;
 import com.springdemo.goodreads.model.Reader;
 
@@ -20,4 +21,5 @@ public interface GoodReadService {
     
     public void saveReader(Reader reader) throws DataAccessException;
 
+    Collection<Reader> findReaderByLastName(String lastName) throws DataAccessException;
 }

@@ -25,11 +25,11 @@
 		     </tr>
 		   </thead>
 		   <tbody>
-		   <c:forEach var="book" items="${books.bookList}">
+		   <c:forEach var="reader" items="${selections}">
 			     <tr>
-			       <td>${book.id}</td>
-			       <td>${book.title}</td>
-			       <td>${book.author}</td>
+			       <td>${reader.id}</td>
+			       <td>${reader.title}</td>
+			       <td>${reader.author}</td>
 			     </tr>
 			</c:forEach>
 		   </tbody>

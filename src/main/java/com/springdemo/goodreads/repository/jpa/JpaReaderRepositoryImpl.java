@@ -1,8 +1,12 @@
 package com.springdemo.goodreads.repository.jpa;
 
+import java.util.Collection;
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+
+import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Repository;
 import com.springdemo.goodreads.model.Reader;
 import com.springdemo.goodreads.repository.ReaderRepository;
@@ -36,5 +40,13 @@ public class JpaReaderRepositoryImpl implements ReaderRepository {
     	}
 
     }
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public Collection<Reader> findByLastName(String lastName) throws DataAccessException {
+		  Query query = this.em.createQuery("SELECT DISTINCT reader FROM Reader reader WHERE reader.lastName LIKE :lastName");
+	      query.setParameter("lastName", lastName + "%");
+	      return query.getResultList();
+	}
 
 }

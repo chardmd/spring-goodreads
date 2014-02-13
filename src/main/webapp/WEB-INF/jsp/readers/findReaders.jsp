@@ -19,13 +19,14 @@
 		
 		    <h2>Find Readers</h2>
 			
-			<form:form modelAttribute="owner" action="${fn:escapeXml(formUrl)}" 
+			<form:form modelAttribute="reader" action="/goodreads/readers.html" 
 													method="get" class="form-horizontal" role="form">
 			  <div class="form-group">
 			    <label for="inputLastName" class="col-sm-2 control-label">Last Name</label>
 			    <div class="col-sm-4">
-			      <input type="password" class="form-control" id="inputLastName" placeholder="Last Name">
+			      <form:input type="text" class="form-control" id="lastName" path="lastName" placeholder="Last Name" />
 			    </div>
+			    <form:errors path="lastName" cssclass="error" element="label" class="error" />
 			  </div>
 			  <div class="form-group">
 			    <div class="col-sm-offset-2 col-sm-10">
