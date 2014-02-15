@@ -25,3 +25,6 @@
 
 <spring:url value="/resources/js/welcome.js" var="js_welcome"/>
 <script src="${js_welcome}"></script>
+
+<spring:url value="/resources/js/tableTools/tableTools.min.js" var="js_tableTools"/>
+<script src="${js_tableTools}"></script>

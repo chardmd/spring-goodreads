@@ -16,6 +16,9 @@
 	 <spring:url value="/resources/css/datatables.css" var="css_datatables"/>
 	 <link rel="stylesheet" href="${css_datatables}" />
 	 
+	 <spring:url value="/resources/css/tableTools.css" var="css_tableTools"/>
+	 <link rel="stylesheet" href="${css_tableTools}" />
+	 
 </head>
 
 
