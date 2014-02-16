@@ -38,6 +38,16 @@
 	 </div>
 	 
 	 <jsp:include page="../fragments/footer.jsp" />
+	 
+	 <spring:url value="/resources/js/tableTools/copy_csv_xls_pdf.swf" var="resourceSwf" />
+	 <script>
+	 	jQuery('.datatable').dataTable({
+			"sDom": 'T<"clear">lfrtip',
+	        "oTableTools": {
+	            "sSwfPath": "${resourceSwf}"
+	        }
+		}); 
+	 </script>
 
 </div>
 

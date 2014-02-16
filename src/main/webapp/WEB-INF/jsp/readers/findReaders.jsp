@@ -18,9 +18,9 @@
 		<div class="readers">
 		
 		    <h2>Find Readers</h2>
-			
-			<form:form modelAttribute="reader" action="/goodreads/readers.html" 
-													method="get" class="form-horizontal" role="form">
+		    
+			<spring:url value="/readers.html" var="formAction" />
+			<form:form modelAttribute="reader" action="${formAction}" method="get" class="form-horizontal" role="form">
 			  <div class="form-group">
 			    <label for="inputLastName" class="col-sm-2 control-label">Last Name</label>
 			    <div class="col-sm-4">

@@ -7,7 +7,7 @@
      </div>
      </div>
 </footer>
-
+ 
 <spring:url value="/resources/js/jquery-1.11.0.min.js" var="lib_jQuery"/>
 <script src="${lib_jQuery}"></script>
 
@@ -19,9 +19,6 @@
 
 <spring:url value="/resources/js/datatables.js" var="js_datatables"/>
 <script src="${js_datatables}"></script>
-
-<spring:url value="/resources/js/bookList.js" var="js_bookList"/>
-<script src="${js_bookList}"></script>
 
 <spring:url value="/resources/js/welcome.js" var="js_welcome"/>
 <script src="${js_welcome}"></script>

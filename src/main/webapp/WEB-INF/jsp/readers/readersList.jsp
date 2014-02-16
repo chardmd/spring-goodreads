@@ -4,7 +4,6 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<%@ taglib prefix="datatables" uri="http://github.com/dandelion/datatables" %>
 
 <html lang="en">
 
@@ -37,6 +36,16 @@
 	 </table>
     
     <jsp:include page="../fragments/footer.jsp"/>
+    
+     <spring:url value="/resources/js/tableTools/copy_csv_xls_pdf.swf" var="resourceSwf" />
+	 <script>
+	 	jQuery('.datatable').dataTable({
+			"sDom": 'T<"clear">lfrtip',
+	        "oTableTools": {
+	            "sSwfPath": "${resourceSwf}"
+	        }
+		}); 
+	 </script>
 
 </div>
 </body>
