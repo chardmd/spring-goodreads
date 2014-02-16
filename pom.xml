@@ -413,7 +413,7 @@
 				<version>2.0</version>
 				<configuration>
 					<server>tomcat-development-server</server>
-					<port>5000</port>
+					<port>8080</port>
 					<path>/goodreads</path>
 				</configuration>
 			</plugin>
@@ -433,6 +433,7 @@
                                     <groupId>com.github.jsimone</groupId>
                                     <artifactId>webapp-runner</artifactId>
                                     <version>7.0.34.0</version>
+                                    <scope>provided</scope>
                                     <destFileName>webapp-runner.jar</destFileName>
                                 </artifactItem>
                             </artifactItems>
