@@ -32,7 +32,8 @@
                     <h3>
                         Github Repo</h3>
                     <p>
-                       https://github.com/richarddimalanta/spring-goodreads</p>
+                    	Basic Architecture - Spring Framework.
+                    </p>
                 </div>
             </div>
             <!-- End Item -->
